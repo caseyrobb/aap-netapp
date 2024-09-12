@@ -8,19 +8,18 @@
     - creds.yml
     - vars.yml
 
-  #module_defaults:
-  #  group/netapp.ontap:
-  #    hostname: "{{ hostname }}"
-  #    username: "{{ username }}"
-  #    password: "{{ password }}"
-  #    https: true
-  #    validate_certs: false
-
-  tasks:
-  - name: info gather
-    na_ontap_rest_info:
+  module_defaults:
+    group/netapp.ontap.netapp_ontap:
       hostname: "{{ hostname }}"
       username: "{{ username }}"
       password: "{{ password }}"
       https: true
       validate_certs: false
+
+  tasks:
+  - name: info gather
+    na_ontap_rest_info:
+    register: ontap-info
+
+  - debug:
+      msg: "{{ ontap-info }}"
