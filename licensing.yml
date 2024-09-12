@@ -20,9 +20,9 @@
   - name: Install Licenses for node1
     na_ontap_license:
       state: present
-      license_code: '{{ licenses.node1 | join(",") }}'
+      license_codes: '{{ licenses.node1 | join(",") }}'
 
   - name: Install Licenses for node2
     na_ontap_license:
       state: present
-      license_code: '{{ licenses.node2 | join(",") }}'
+      license_codes: '{{ licenses.node2 | join(",") }}'
