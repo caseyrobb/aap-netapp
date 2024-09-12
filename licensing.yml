@@ -18,21 +18,11 @@
 
   tasks:
   - name: Install Licenses for node1
-    na_ontap_cluster:
+    na_ontap_licence:
       state: present
-      cluster_name: "{{ cluster_name }}"
-      license_code: "{{ item }}"
-      node_name: node1-01
-    loop: "{{ licenses.node1 }}"
+      license_code: '{{ licenses.node1 | join(",") }}'
 
   - name: Install Licenses for node2
-    na_ontap_cluster:
+    na_ontap_licence:
       state: present
-      cluster_name: "{{ cluster_name }}"
-      license_code: "{{ item }}"
-      node_name: node1-02
-    loop: "{{ licenses.node2 }}"
-
-
-  - debug:
-      msg: "{{ ontap_results }}"
+      license_code: '{{ licenses.node2 | join(",") }}'
