@@ -19,7 +19,7 @@
   tasks:
   - name: info gather
     na_ontap_rest_info:
-    register: ontap-info
+    register: ontap_results
 
   - debug:
-      msg: "{{ ontap-info }}"
+      msg: "{{ ontap_results }}"
