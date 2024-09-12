@@ -1,2 +1,3 @@
 hostname: 172.16.0.182
 username: admin
+cluster_name: test-cluster

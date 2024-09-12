@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+
+  collections:
+  - netapp.ontap
+
+  vars_files:
+    - creds.yml
+    - vars.yml
+
+  module_defaults:
+    group/netapp.ontap.netapp_ontap:
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      https: true
+      validate_certs: false
+
+  tasks:
+  - name: Install Licenses for node1
+    na_ontap_cluster:
+      state: present
+      cluster_name: "{{ cluster_name }}"
+      license_code: "{{ item }}"
+    loop: "{{ licenses.node1 }}"
+
+  - name: Install Licenses for node2
+    na_ontap_cluster:
+      state: present
+      cluster_name: "{{ cluster_name }}"
+      license_code: "{{ item }}"
+    loop: "{{ licenses.node2 }}"
+
+
+  - debug:
+      msg: "{{ ontap_results }}"
