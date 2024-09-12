@@ -22,6 +22,7 @@
       state: present
       cluster_name: "{{ cluster_name }}"
       license_code: "{{ item }}"
+      node_name: node1-01
     loop: "{{ licenses.node1 }}"
 
   - name: Install Licenses for node2
@@ -29,6 +30,7 @@
       state: present
       cluster_name: "{{ cluster_name }}"
       license_code: "{{ item }}"
+      node_name: node1-02
     loop: "{{ licenses.node2 }}"
 
 
