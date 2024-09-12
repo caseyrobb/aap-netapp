@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  collections:
+  - netapp.ontap
+  vars_files:
+    - creds.yml
+    - vars.yml
+
+    login: &login
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      https: true
+      validate_certs: false
+  tasks:
+  - name: info gather
+    na_ontap_rest_info:
+      subset: volume_info
+      <<: *login
