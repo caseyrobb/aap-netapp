@@ -19,7 +19,6 @@
   tasks:
   - name: info gather
     na_ontap_rest_info:
-      subset: volume_info
       hostname: "{{ hostname }}"
       username: "{{ username }}"
       password: "{{ password }}"
