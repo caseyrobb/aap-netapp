@@ -1,7 +1,9 @@
 version: 3
 
-dependencies: 
-  galaxy: requirements.yml
+dependencies:
+  galaxy:
+    collections:
+      - netapp.ontap
 
 images: 
   base_image:
