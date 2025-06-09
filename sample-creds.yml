@@ -1,0 +1,31 @@
+password: my_netapp_password
+
+licenses:
+  node1:
+    - xxx  # CIFS protocol
+    - xxx  # Fibre Channel Protocol 
+    - xxx  # FlexClone
+    - xxx  # OnCommand Insight and Balance products
+    - xxx  # iSCSI protocol
+    - xxx  # NFS protocol
+    - xxx  # SnapLock Compliance
+    - xxx  # SnapManager and SnapDrive products
+    - xxx  # SnapMirror, including synchronous SnapMirror
+    - xxx  # SnapProtect Applications
+    - xxx  # SnapRestore
+    - xxx  # SnapVault primary and secondary
+
+  node2:
+    - xxx  # CIFS protocol
+    - xxx  # Fibre Channel Protocol 
+    - xxx  # FlexClone
+    - xxx  # OnCommand Insight and Balance products
+    - xxx  # iSCSI protocol
+    - xxx  # NFS protocol
+    - xxx  # SnapLock Compliance
+    - xxx  # SnapManager and SnapDrive products
+    - xxx  # SnapMirror, including synchronous SnapMirror
+    - xxx  # SnapProtect Applications
+    - xxx  # SnapRestore
+    - xxx  # SnapVault primary and secondary
+
